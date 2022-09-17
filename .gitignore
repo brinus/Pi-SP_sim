@@ -34,3 +34,4 @@
 # Own files
 .vscode
 .DS_Store
+build
