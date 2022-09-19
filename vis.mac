@@ -1,0 +1,8 @@
+/vis/open OGL
+/vis/drawVolume
+/vis/viewer/set/autoRefresh true
+/vis/scene/add/trajectories smooth
+/vis/geometry/set/forceAuxEdgeVisible all
+/vis/geometry/set/visibility logicWorld 0 false
+# /tracking/verbose 2
+/vis/scene/add/axes -0.2 -0.2 -0.2 0.1 m
