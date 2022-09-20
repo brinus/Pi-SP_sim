@@ -1,4 +1,5 @@
 /vis/open OGL
+/vis/verbose 0
 /vis/drawVolume
 /vis/viewer/set/autoRefresh true
 /vis/scene/add/trajectories smooth

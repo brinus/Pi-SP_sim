@@ -27,7 +27,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step * aStep, G4TouchableHistory *ROhi
     G4AnalysisManager *man = G4AnalysisManager::Instance();
 
     if (SDName == "sensFDet"){
-        man->FillNtupleIColumn(0, evt);
+        man->FillNtupleIColumn(0, 0, evt);
         man->FillNtupleDColumn(0, 1, posPion[0]);
         man->FillNtupleDColumn(0, 2, posPion[1]);
         man->FillNtupleDColumn(0, 3, posPion[2]);
@@ -39,6 +39,12 @@ G4bool MySensitiveDetector::ProcessHits(G4Step * aStep, G4TouchableHistory *ROhi
             G4String proc = preStepPoint->GetProcessDefinedStep()->GetProcessName();
             man->FillNtupleSColumn(1, 0, proc);
             man->AddNtupleRow(1);
+
+            man->FillNtupleIColumn(2, 0, evt);
+            man->FillNtupleDColumn(2, 1, posPion[0]);
+            man->FillNtupleDColumn(2, 2, posPion[1]);
+            man->FillNtupleDColumn(2, 3, posPion[2]);
+            man->AddNtupleRow(2);
         }
     }
 

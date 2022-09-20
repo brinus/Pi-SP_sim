@@ -13,6 +13,8 @@
 #include "G4Tubs.hh"
 #include "G4VisAttributes.hh"
 
+#include "G4GDMLParser.hh"
+
 #include "detector.hh"
 
 class MyDetectorConstruction : public G4VUserDetectorConstruction
