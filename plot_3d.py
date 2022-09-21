@@ -6,7 +6,6 @@
 
 # pylint: disable=unused-import
 
-import string
 import ROOT
 import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
