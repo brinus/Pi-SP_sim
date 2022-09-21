@@ -5,25 +5,20 @@ MyRunAction::MyRunAction()
     G4AnalysisManager * man = G4AnalysisManager::Instance();
 
     // Ntuple for FDet data
-    man->CreateNtuple("Hits", "Hits");
+    man->CreateNtuple("FDet", "FDet");
     man->CreateNtupleIColumn("fEvents");
     man->CreateNtupleDColumn("fX");
     man->CreateNtupleDColumn("fY");
     man->CreateNtupleDColumn("fZ");
     man->FinishNtuple(0);
 
-    // Ntuple for process-name in LH2 target
-    man->CreateNtuple("Porcess_name", "Process_name");
+    // Ntuple for process-name and endpoint coordinates in LH2 target
+    man->CreateNtuple("LH2", "LH2");
     man->CreateNtupleSColumn("fProc");
-    man->FinishNtuple(1);
-
-    // Ntuple for ending point of pi- in LH2 target
-    man->CreateNtuple("Pion_EP", "Pion_EP");
-    man->CreateNtupleIColumn("fEvents");
     man->CreateNtupleDColumn("fX");
     man->CreateNtupleDColumn("fY");
     man->CreateNtupleDColumn("fZ");
-    man->FinishNtuple(2);
+    man->FinishNtuple(1);
 }
 
 MyRunAction::~MyRunAction()

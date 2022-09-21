@@ -25,10 +25,8 @@ bool isPositiveNumber(char number[])
     return true;
 }
 
-int main(int argc, char** argv){
-
-   std::vector<std::string> keywords = {"vis", "beamOn"};
-
+G4UImanager * init(int argc, char** argv)
+{
    G4Random::setTheEngine(new CLHEP::RanecuEngine());
    G4long seed = time(NULL);
    G4Random::setTheSeed(seed);
@@ -39,13 +37,19 @@ int main(int argc, char** argv){
    runManager->SetUserInitialization(new MyActionInitialization());
    runManager->Initialize();
 
-   G4UIExecutive *ui = nullptr;
-   if (argc == 1 || argv[1] == keywords[0]) ui = new G4UIExecutive(argc, argv);
-   
    G4VisManager *visManager = new G4VisExecutive();
    visManager->Initialize();
 
    G4UImanager *UImanager = G4UImanager::GetUIpointer();
+   return UImanager;
+}
+
+int main(int argc, char** argv){
+
+   std::vector<std::string> keywords = {"vis", "beamOn", "help"};
+
+   G4UIExecutive *ui = nullptr;
+   if (argc == 1 || argv[1] == keywords[0]) ui = new G4UIExecutive(argc, argv);
 
    std::cout << "\n\n---------------------- STARTING PROGRAM ----------------------\n" << std::endl;
    std::cout << " Author: Matteo Brini" << std::endl;
@@ -55,17 +59,21 @@ int main(int argc, char** argv){
    std::cout << "--------------------------------------------------------------\n" << std::endl;
 
    if (argc == 1){
-      //ui = new G4UIExecutive(argc, argv);
+      G4UImanager * UImanager = init(argc, argv);
       UImanager->ApplyCommand("/control/execute vis.mac");
    }
    else if (argv[1] == keywords[0]){
-      //ui = new G4UIExecutive(argc, argv);
+      G4UImanager * UImanager = init(argc, argv);
       UImanager->ApplyCommand("/control/execute vis.mac");
    }
-   else if (argv[1] == keywords[1] && argc == 2) UImanager->ApplyCommand("/run/beamOn 100");
+   else if (argv[1] == keywords[1] && argc == 2){
+      G4UImanager * UImanager = init(argc, argv);
+      UImanager->ApplyCommand("/run/beamOn 100");
+   }
    else if (argv[1] == keywords[1] && argc == 3){
       std::string events = argv[2];
       if (isPositiveNumber(argv[2])){
+         G4UImanager * UImanager = init(argc, argv);
          UImanager->ApplyCommand("/run/beamOn " + events);
       }
       else{
@@ -74,7 +82,15 @@ int main(int argc, char** argv){
          std::cout << "                ^" << std::endl;
          return 0;
       }
-
+   }
+   else if (argv[1] == keywords[2] && argc == 2){
+      std::cout << "\n Pi-SP_sim Help:\n" << std::endl;
+      std::cout << "Pi-SP_sim/build $ ./sim [command] [option]\n" << std::endl;
+      std::cout << "             - Simulation starts in GUI mode" << std::endl;
+      std::cout << "         vis - Simulation starts in GUI mode" << std::endl;
+      std::cout << "  beamOn [x] - Simulation starts in batch mode, executing macro /run/beamOn [x]," << std::endl;
+      std::cout << "               where [x] is an integer passed as input (if not, defalut is [x] = 100)\n" << std::endl;
+      return 0;
    }
    ui->SessionStart();
 

@@ -38,13 +38,10 @@ G4bool MySensitiveDetector::ProcessHits(G4Step * aStep, G4TouchableHistory *ROhi
         if (track->GetTrackStatus() == 2){ // 2 == fStopAndKill
             G4String proc = preStepPoint->GetProcessDefinedStep()->GetProcessName();
             man->FillNtupleSColumn(1, 0, proc);
+            man->FillNtupleDColumn(1, 1, posPion[0]);
+            man->FillNtupleDColumn(1, 2, posPion[1]);
+            man->FillNtupleDColumn(1, 3, posPion[2]);
             man->AddNtupleRow(1);
-
-            man->FillNtupleIColumn(2, 0, evt);
-            man->FillNtupleDColumn(2, 1, posPion[0]);
-            man->FillNtupleDColumn(2, 2, posPion[1]);
-            man->FillNtupleDColumn(2, 3, posPion[2]);
-            man->AddNtupleRow(2);
         }
     }
 

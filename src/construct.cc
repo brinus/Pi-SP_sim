@@ -81,11 +81,6 @@ G4VPhysicalVolume * MyDetectorConstruction::Construct()
 
     logicFDet->SetVisAttributes(cYellow);
 
-    // ---------- GDLM PARSER -----------------------------
-
-    G4GDLMParser fParser;
-    fParser.Write("geometry.gdlm", physLH2);
-
     return physWorld;
 }
 
