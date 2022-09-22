@@ -81,6 +81,18 @@ G4VPhysicalVolume * MyDetectorConstruction::Construct()
 
     logicFDet->SetVisAttributes(cYellow);
 
+    // Modulable thickness layer
+    double thick = 0.05;
+    G4Tubs * solidThick = new G4Tubs("solidThick", 0.*mm, 53.*mm, (thick/2)*mm, 0, twopi);
+    G4LogicalVolume * logicThick = new G4LogicalVolume(solidThick, inox, "logicThick");
+
+    int Layers = 20;
+    for(int i=0; i<Layers; i++){
+        G4VPhysicalVolume * physThick = new G4PVPlacement(0, G4ThreeVector(0, 0, (-55 - thick/2 - thick*i)*mm), logicThick, "physThick", logicWorld, false, i, true);
+    }
+
+    logicThick->SetVisAttributes(cGreen);
+
     return physWorld;
 }
 

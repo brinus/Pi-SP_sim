@@ -62,15 +62,16 @@ int main(int argc, char** argv){
       G4UImanager * UImanager = init(argc, argv);
       UImanager->ApplyCommand("/control/execute vis.mac");
    }
-   else if (argv[1] == keywords[0]){
+   else if (argv[1] == keywords[0]){                  // vis
       G4UImanager * UImanager = init(argc, argv);
       UImanager->ApplyCommand("/control/execute vis.mac");
    }
-   else if (argv[1] == keywords[1] && argc == 2){
+   else if (argv[1] == keywords[1] && argc == 2){     // beamOn
       G4UImanager * UImanager = init(argc, argv);
       UImanager->ApplyCommand("/run/beamOn 100");
+      return 0;
    }
-   else if (argv[1] == keywords[1] && argc == 3){
+   else if (argv[1] == keywords[1] && argc == 3){     
       std::string events = argv[2];
       if (isPositiveNumber(argv[2])){
          G4UImanager * UImanager = init(argc, argv);
@@ -83,7 +84,7 @@ int main(int argc, char** argv){
          return 0;
       }
    }
-   else if (argv[1] == keywords[2] && argc == 2){
+   else if (argv[1] == keywords[2] && argc == 2){     // help
       std::cout << "\n Pi-SP_sim Help:\n" << std::endl;
       std::cout << "Pi-SP_sim/build $ ./sim [command] [option]\n" << std::endl;
       std::cout << "             - Simulation starts in GUI mode" << std::endl;

@@ -16,7 +16,6 @@ MySDParticleFilter::~MySDParticleFilter()
 G4bool MySensitiveDetector::ProcessHits(G4Step * aStep, G4TouchableHistory *ROhist)
 {
     G4Track * track = aStep->GetTrack();
-
     G4StepPoint * preStepPoint = aStep->GetPreStepPoint();
     G4StepPoint * postStepPoint = aStep->GetPostStepPoint();
 
@@ -31,16 +30,21 @@ G4bool MySensitiveDetector::ProcessHits(G4Step * aStep, G4TouchableHistory *ROhi
         man->FillNtupleDColumn(0, 1, posPion[0]);
         man->FillNtupleDColumn(0, 2, posPion[1]);
         man->FillNtupleDColumn(0, 3, posPion[2]);
+        man->FillNtupleDColumn(0, 4, preStepPoint->GetTotalEnergy());
+        // man->FillNtupleDColumn(0, ,);
+        // man->FillNtupleDColumn(0, ,);
         man->AddNtupleRow(0);
         }
 
     if (SDName == "sensLH2"){
         if (track->GetTrackStatus() == 2){ // 2 == fStopAndKill
             G4String proc = preStepPoint->GetProcessDefinedStep()->GetProcessName();
-            man->FillNtupleSColumn(1, 0, proc);
-            man->FillNtupleDColumn(1, 1, posPion[0]);
-            man->FillNtupleDColumn(1, 2, posPion[1]);
-            man->FillNtupleDColumn(1, 3, posPion[2]);
+            man->FillNtupleIColumn(1, 0, evt);
+            man->FillNtupleSColumn(1, 1, proc);
+            man->FillNtupleDColumn(1, 2, posPion[0]);
+            man->FillNtupleDColumn(1, 3, posPion[1]);
+            man->FillNtupleDColumn(1, 4, posPion[2]);
+            man->FillNtupleDColumn(1, 5, preStepPoint->GetTotalEnergy());
             man->AddNtupleRow(1);
         }
     }

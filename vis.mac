@@ -5,5 +5,6 @@
 /vis/scene/add/trajectories smooth
 /vis/geometry/set/forceAuxEdgeVisible all
 /vis/geometry/set/visibility logicWorld 0 false
+/vis/scene/endOfEventAction accumulate
 # /tracking/verbose 2
 /vis/scene/add/axes -0.2 -0.2 -0.2 0.1 m

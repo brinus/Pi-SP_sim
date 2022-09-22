@@ -4,6 +4,7 @@
 #include "TCanvas.h"
 #include "TTree.h"
 #include "TH1F.h"
+#include "TH2F.h"
 #include "TF1.h"
 
 #include "TStyle.h"
@@ -18,7 +19,7 @@ void fancyPlot(TH1F * plt){
     plt->GetYaxis()->SetTitleOffset(1.05);
 }
 
-void plot_LH2_fZ(char * fname = "build/output.root"){
+void plot_LH2_profile(){
     
     // ---------- INITIAL SETTINGS ------------------------
 
@@ -28,11 +29,15 @@ void plot_LH2_fZ(char * fname = "build/output.root"){
 
     // ---------- VARAIBLES -------------------------------
 
+    Double_t X_pos, Y_pos, Z_pos;
+
     TCanvas * c1 = new TCanvas("c1", "c1", 1);
+    TCanvas * c2 = new TCanvas("c2", "c2", 1);
     TH1F * h1 = new TH1F("fZ", "Longitudinal profile", 100, -40, 40);
+    TH2F * hXY = new TH2F("fX:fY", "Transverse profile", 100, -30, 30, 100, -30, 30);
     TH1F *h1sum = new TH1F("h1sum","Longitudinal profile integral",100,-40, 40);
     
-    TFile * f = new TFile(fname);
+    TFile * f = new TFile("build/output.root");
     if (!f){
         printf("Cannot get the TFile\n");
         return;
@@ -44,10 +49,23 @@ void plot_LH2_fZ(char * fname = "build/output.root"){
         return;
     }
     
+    data->SetBranchAddress("fX", &X_pos);
+    data->SetBranchAddress("fY", &Y_pos);
+    data->SetBranchAddress("fZ", &Z_pos);
+
+    for (Int_t i=0; i<data->GetEntries(); i++){
+        data->GetEntry(i);
+        h1->Fill(Z_pos);
+        hXY->Fill(X_pos, Y_pos);
+    }
+
     // ----------- PLOT -----------------------------------
 
+    // First TCanvas
+    c1->cd();
+
     // Z profile
-    data->Draw("fZ >> fZ");
+    h1->Draw();
     c1->Update();
     fancyPlot(h1);
 
@@ -70,4 +88,13 @@ void plot_LH2_fZ(char * fname = "build/output.root"){
     axis->SetLineColor(kRed);
     axis->SetLabelColor(kRed);
     axis->Draw();
+    c1->Update();
+
+    // Second TCanvas
+    c2->cd(); 
+
+    // X-Y profile
+    hXY->Draw("lego1");
+    c2->Update();
+
 }
