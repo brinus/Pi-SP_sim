@@ -14,7 +14,7 @@ void mScan_layers(){
     gStyle->SetOptStat(0);
 
     std::vector<TH1 *> vHist;
-    std::string fName = "res/output.";
+    std::string fName = "build/o.fixinit.l";
     std::string fType = ".root";
     std::vector<std::string> vLayers = {"0", "1", "2"};
 
@@ -44,9 +44,9 @@ void mScan_layers(){
         legend->AddEntry(vHist[i], ("#Layers = " + vLayers[i]).c_str(), "LPF");
     }
 
-    vHist[0]->SetTitle("Longitudinal profile, entries = 10000 x run, layer = 0.5 mm (stain steel); z [mm]; occurrencies");
+    vHist[0]->SetTitle("Longitudinal profile, entries = 5000 x run, layer = 0.5 mm (stain steel); z [mm]; occurrencies");
 
-    TLine * lleft = new TLine(-35, 0, -35, 349); lleft->Draw();
-    TLine * lright = new TLine(35, 0, 35, 349); lright->Draw();
+    TLine * lleft = new TLine(-35, 0, -35, 557); lleft->Draw();
+    TLine * lright = new TLine(35, 0, 35, 557); lright->Draw();
     legend->Draw();
 }

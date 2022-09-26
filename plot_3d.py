@@ -60,8 +60,8 @@ if __name__ == '__main__':
 
     # ---------- DATA -------------------------------------
 
-    f = ROOT.TFile("res/output.1.root", "read")
-    data = f.Get("LH2")
+    f = ROOT.TFile("res/o220921.n1e6.root", "read")
+    data = f.Get("Pion_EP")
     fX = np.zeros(data.GetEntries(), dtype = float)
     fY = np.zeros(data.GetEntries(), dtype = float)
     fZ = np.zeros(data.GetEntries(), dtype = float)
