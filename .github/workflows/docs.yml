@@ -29,6 +29,6 @@ jobs:
         # Generated HTML documents output folder
         htmloutput: ./html
         # GitHub Pages branch name
-        ghpagesbranch: gh-pages
+        ghpagesbranch: main
         # GitHub Pages directory path
         ghpagesdir: ./html/
