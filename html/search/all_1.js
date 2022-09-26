@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['myactioninitialization_0',['MyActionInitialization',['../class_my_action_initialization.html',1,'']]],
-  ['mydetectorconstruction_1',['MyDetectorConstruction',['../class_my_detector_construction.html',1,'']]],
-  ['myphysicslist_2',['MyPhysicsList',['../class_my_physics_list.html',1,'']]],
-  ['myprimarygenerator_3',['MyPrimaryGenerator',['../class_my_primary_generator.html',1,'']]],
-  ['myrunaction_4',['MyRunAction',['../class_my_run_action.html',1,'']]],
-  ['mysdparticlefilter_5',['MySDParticleFilter',['../class_my_s_d_particle_filter.html',1,'']]],
-  ['mysensitivedetector_6',['MySensitiveDetector',['../class_my_sensitive_detector.html',1,'']]]
+  ['beginofrunaction_0',['BeginOfRunAction',['../class_my_run_action.html#a9dacd747212ed9d0bcd9c365e0cf6c52',1,'MyRunAction']]],
+  ['build_1',['Build',['../class_my_action_initialization.html#a143acaaac6ada5dba428ada82d136910',1,'MyActionInitialization']]]
 ];

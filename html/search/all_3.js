@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['set_5faxes_5fequal_0',['set_axes_equal',['../namespaceplot__3d.html#a1c7d5c86680fe42e02d73d97a36e4025',1,'plot_3d']]]
+  ['definematerial_0',['DefineMaterial',['../class_my_detector_construction.html#ae06ef539006cf61ae940abc631d85893',1,'MyDetectorConstruction']]],
+  ['detector_2ecc_1',['detector.cc',['../detector_8cc.html',1,'']]],
+  ['detector_2ehh_2',['detector.hh',['../detector_8hh.html',1,'']]]
 ];

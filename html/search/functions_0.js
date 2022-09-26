@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['data_5ffor_5fcylinder_5falong_5fz_0',['data_for_cylinder_along_z',['../namespaceplot__3d.html#a5fdc14a62033f8c2db9a76de2de47f8b',1,'plot_3d']]]
+  ['beginofrunaction_0',['BeginOfRunAction',['../class_my_run_action.html#a9dacd747212ed9d0bcd9c365e0cf6c52',1,'MyRunAction']]],
+  ['build_1',['Build',['../class_my_action_initialization.html#a143acaaac6ada5dba428ada82d136910',1,'MyActionInitialization']]]
 ];
