@@ -1,0 +1,23 @@
+\hypertarget{run_8hh_source}{}\doxysection{run.\+hh}
+\label{run_8hh_source}\index{/Users/matteobrini/Documents/Git projects/Pi-\/SP\_sim/include/run.hh@{/Users/matteobrini/Documents/Git projects/Pi-\/SP\_sim/include/run.hh}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef RUN\_HH}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define RUN\_HH}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}G4UserRunAction.hh"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}G4AnalysisManager.hh"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_my_run_action}{MyRunAction}} : \textcolor{keyword}{public} G4UserRunAction}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \textcolor{keyword}{public}:}
+\DoxyCodeLine{10         \mbox{\hyperlink{class_my_run_action}{MyRunAction}}();}
+\DoxyCodeLine{11         \mbox{\hyperlink{class_my_run_action}{\string~MyRunAction}}();}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} BeginOfRunAction(\textcolor{keyword}{const} G4Run *);}
+\DoxyCodeLine{14         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} EndOfRunAction(\textcolor{keyword}{const} G4Run *);}
+\DoxyCodeLine{15 \};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,53 @@
+\hypertarget{construct_8hh_source}{}\doxysection{construct.\+hh}
+\label{construct_8hh_source}\index{/Users/matteobrini/Documents/Git projects/Pi-\/SP\_sim/include/construct.hh@{/Users/matteobrini/Documents/Git projects/Pi-\/SP\_sim/include/construct.hh}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CONSTRUCT\_HH}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CONSTRUCT\_HH}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}G4VUserDetectorConstruction.hh"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}G4VPhysicalVolume.hh"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}G4LogicalVolume.hh"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}G4PVPlacement.hh"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}G4NistManager.hh"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}G4SystemOfUnits.hh"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}G4PhysicalConstants.hh"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}G4GenericMessenger.hh"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}G4Box.hh"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}G4Tubs.hh"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}G4VisAttributes.hh"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}detector.hh"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_my_detector_construction}{MyDetectorConstruction}} : \textcolor{keyword}{public} G4VUserDetectorConstruction}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21     \textcolor{keyword}{public}:}
+\DoxyCodeLine{22         \mbox{\hyperlink{class_my_detector_construction}{MyDetectorConstruction}}();}
+\DoxyCodeLine{23         \mbox{\hyperlink{class_my_detector_construction}{\string~MyDetectorConstruction}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25         \textcolor{keyword}{virtual} G4VPhysicalVolume * Construct();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keyword}{private}:}
+\DoxyCodeLine{28         G4Box *solidWorld;}
+\DoxyCodeLine{29         G4Tubs *solidCyl\_o, *solidCyl\_v, *solidCyl\_i, *solidLH2, *solidFDet, *solidThick;}
+\DoxyCodeLine{30         G4LogicalVolume *logicWorld, *logicCyl\_o, *logicCyl\_v, *logicCyl\_i, *logicLH2, *logicFDet, *logicThick;}
+\DoxyCodeLine{31         G4VPhysicalVolume *physWorld, *physCyl\_o, *physCyl\_v, *physCyl\_i, *physLH2, *physFDet, *physThick;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         G4double xWorld, yWorld, zWorld;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         G4Material *worldMat, *lH2, *inox, *vacuum;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         G4GenericMessenger * fMessenger;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         G4int layers;}
+\DoxyCodeLine{40         G4double thick;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} ConstructSDandField();}
+\DoxyCodeLine{43         \textcolor{keywordtype}{void} DefineMaterial();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

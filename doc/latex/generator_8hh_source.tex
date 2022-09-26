@@ -1,0 +1,28 @@
+\hypertarget{generator_8hh_source}{}\doxysection{generator.\+hh}
+\label{generator_8hh_source}\index{/Users/matteobrini/Documents/Git projects/Pi-\/SP\_sim/include/generator.hh@{/Users/matteobrini/Documents/Git projects/Pi-\/SP\_sim/include/generator.hh}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef GENERATOR\_HH}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define GENERATOR\_HH}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}G4VUserPrimaryGeneratorAction.hh"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}G4ParticleGun.hh"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}G4SystemOfUnits.hh"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}G4ParticleTable.hh"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_my_primary_generator}{MyPrimaryGenerator}} : \textcolor{keyword}{public} G4VUserPrimaryGeneratorAction}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{keyword}{public}:}
+\DoxyCodeLine{13         \mbox{\hyperlink{class_my_primary_generator}{MyPrimaryGenerator}}();}
+\DoxyCodeLine{14         \mbox{\hyperlink{class_my_primary_generator}{\string~MyPrimaryGenerator}}();}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16    \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} GeneratePrimaries(G4Event*);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{private}:}
+\DoxyCodeLine{19     G4ParticleGun * fParticleGun;}
+\DoxyCodeLine{20 \};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
