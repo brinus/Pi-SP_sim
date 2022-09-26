@@ -60,7 +60,7 @@ if __name__ == '__main__':
 
     # ---------- DATA -------------------------------------
 
-    f = ROOT.TFile("build/output.root", "read")
+    f = ROOT.TFile("res/output.1.root", "read")
     data = f.Get("LH2")
     fX = np.zeros(data.GetEntries(), dtype = float)
     fY = np.zeros(data.GetEntries(), dtype = float)
