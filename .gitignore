@@ -35,5 +35,4 @@
 .vscode
 .DS_Store
 build
-html
-latex
+res/*.pdf
