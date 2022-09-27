@@ -5,7 +5,7 @@
 /** 
  * @file sim.cc
  * @author Matteo Brini (brinimatteo@gmail.com)
- * @brief 
+ * @brief Main file
  * @version 0.1
  * @date 2022-09-26
  * 
@@ -25,12 +25,16 @@
 #include "physics.hh"
 #include "action.hh"
 
+/**
+ * @brief Global struct to store usefull infos.
+ * 
+ */
 struct Configuration
 {
    Configuration();
-   bool vis;
-   bool beamOn;
-   char * nEvents;
+   bool vis; /*!< Flag for the visualization option.*/
+   bool beamOn; /*!< Flag for the beamOn option.*/
+   char * nEvents; /*!< Number to pass at beamOn macro.*/
 };
 
 Configuration::Configuration()
@@ -42,6 +46,11 @@ Configuration::Configuration()
 
 Configuration gConfig;
 
+/**
+ * @brief Prints the help message.
+ * 
+ * This message is printed when -h flag or wrong input is passed to the program.
+ */
 void PrintHelp()
 {
    // Print the help message on screen
@@ -55,6 +64,13 @@ void PrintHelp()
    std::cout << "                          where [n] is an integer passed as input (defalut is [n] = 100)\n" << std::endl;
 }
 
+/**
+ * @brief Checks if input is a natural number.
+ * 
+ * @param number String you want to check.
+ * @return true input can be a natural number.
+ * @return false input cannot be a natural number.
+ */
 bool IsPositiveNumber(const char number[])
 {
 
@@ -68,6 +84,13 @@ bool IsPositiveNumber(const char number[])
    return true;
 }
 
+/**
+ * @brief Initialize G4UImanager instance.
+ * 
+ * @param argc 
+ * @param argv 
+ * @return G4UImanager* A pointer to the initialized instance.
+ */
 G4UImanager * InitUI(int argc, const char** argv)
 {
    G4Random::setTheEngine(new CLHEP::RanecuEngine());
@@ -87,6 +110,16 @@ G4UImanager * InitUI(int argc, const char** argv)
    return UImanager;
 }
 
+/**
+ * @brief Main function.
+ * 
+ * Checks for user input flags, stores them in global variable gConfig. Controls for eventual errors.
+ * Executes the program based on the activated flags in gConfig. 
+ * 
+ * @param argc 
+ * @param argv 
+ * @return int 
+ */
 int main(int argc, const char** argv){
 
    std::cout << "\n\n---------------------- STARTING PROGRAM ----------------------\n" << std::endl;
