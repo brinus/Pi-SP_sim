@@ -73,7 +73,6 @@ void PrintHelp()
  */
 bool IsPositiveNumber(const char number[])
 {
-
    int i = 0;
    if (number[0] == '-')
       return false;
