@@ -49,7 +49,7 @@ Configuration gConfig;
 /**
  * @brief Prints the help message.
  * 
- * This message is printed when -h flag or wrong input is passed to the program.
+ * @details This message is printed when -h flag or wrong input is passed to the program.
  */
 void PrintHelp()
 {
@@ -113,8 +113,8 @@ G4UImanager * InitUI(int argc, const char** argv)
 /**
  * @brief Main function.
  * 
- * Checks for user input flags, stores them in global variable gConfig. Controls for eventual errors.
- * Executes the program based on the activated flags in gConfig. 
+ * @details Checks for user input flags, stores them in global variable gConfig. Controls for eventual errors.
+ * Executes the program based on the activated flags in gConfig.
  * 
  * @param argc 
  * @param argv 
@@ -128,15 +128,6 @@ int main(int argc, const char** argv){
    std::cout << " Description: pi- stopping power in LH2 target inside a stain steel tank" << std::endl;
    std::cout << " Git-Hub repository link: https://github.com/brinus/Pi-SP_sim\n" << std::endl;
    std::cout << "--------------------------------------------------------------\n" << std::endl;
-
-   G4UIExecutive * ui = nullptr;
-
-   if (argc == 1){
-      gConfig.vis = true;
-      ui = new G4UIExecutive(argc, (char **)argv);
-      G4UImanager * UImanager = InitUI(argc, argv);
-      UImanager->ApplyCommand("/control/execute vis.mac");
-   }
 
    for (int i = 1; i < argc; i++){
       if (strcmp(argv[i], "-v") == 0 || strcmp(argv[i], "--vis") == 0){
@@ -155,23 +146,25 @@ int main(int argc, const char** argv){
          return 1;
       }
       else if (argv[i][0] == '-'){
-         std::cerr << "Unknown flag: " << argv[i] << "\n\n";
+         std::cerr << "Unknown flag: " << argv[i] << "\n";
          PrintHelp();
          return 1;
       }
       else{
-         std::cerr << "Unknown command: " << argv[i] << "\n\n";
+         std::cerr << "Unknown command: " << argv[i] << "\n";
          PrintHelp();
          return 1;
       }
    }
 
    G4UImanager * UImanager = InitUI(argc, argv);
+   G4UIExecutive * ui = nullptr;
 
-   if (gConfig.vis){
+   if (gConfig.vis || argc == 1){
       ui = new G4UIExecutive(argc, (char **)argv);
       UImanager->ApplyCommand("/control/execute vis.mac");
    }
+
    if (gConfig.beamOn){
       UImanager->ApplyCommand("/run/beamOn " + (std::string)gConfig.nEvents);
    }
