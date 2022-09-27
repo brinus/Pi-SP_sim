@@ -70,13 +70,13 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">sim.cc File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
 <code>#include &quot;G4RunManager.hh&quot;</code><br />
 <code>#include &quot;G4UImanager.hh&quot;</code><br />
 <code>#include &quot;G4VisManager.hh&quot;</code><br />
@@ -88,14 +88,26 @@ $(function() {
 </div>
 <p><a href="sim_8cc_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_configuration.html">Configuration</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5000f3af8769505c1ff33bd175fa2765"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sim_8cc.html#a5000f3af8769505c1ff33bd175fa2765">isPositiveNumber</a> (char number[])</td></tr>
-<tr class="separator:a5000f3af8769505c1ff33bd175fa2765"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50080c6fb7f8dc7b0e9eb84c999de0b7"><td class="memItemLeft" align="right" valign="top">G4UImanager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sim_8cc.html#a50080c6fb7f8dc7b0e9eb84c999de0b7">init</a> (int argc, char **argv)</td></tr>
-<tr class="separator:a50080c6fb7f8dc7b0e9eb84c999de0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sim_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
-<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae964ff8411b4fdcaf65cb5529aea4bef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sim_8cc.html#ae964ff8411b4fdcaf65cb5529aea4bef">PrintHelp</a> ()</td></tr>
+<tr class="separator:ae964ff8411b4fdcaf65cb5529aea4bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e806d6fe067fcfda90a867e1136b418"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sim_8cc.html#a8e806d6fe067fcfda90a867e1136b418">IsPositiveNumber</a> (const char number[])</td></tr>
+<tr class="separator:a8e806d6fe067fcfda90a867e1136b418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a0039b91cdf0f83a50fbc068faee32f"><td class="memItemLeft" align="right" valign="top">G4UImanager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sim_8cc.html#a6a0039b91cdf0f83a50fbc068faee32f">InitUI</a> (int argc, const char **argv)</td></tr>
+<tr class="separator:a6a0039b91cdf0f83a50fbc068faee32f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a217dbf8b442f20279ea00b898af96f52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sim_8cc.html#a217dbf8b442f20279ea00b898af96f52">main</a> (int argc, const char **argv)</td></tr>
+<tr class="separator:a217dbf8b442f20279ea00b898af96f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a93bd1107b21227843b0188d647961929"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_configuration.html">Configuration</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sim_8cc.html#a93bd1107b21227843b0188d647961929">gConfig</a></td></tr>
+<tr class="separator:a93bd1107b21227843b0188d647961929"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Matteo Brini (<a href="#" onclick="location.href='mai'+'lto:'+'bri'+'ni'+'mat'+'te'+'o@g'+'ma'+'il.'+'co'+'m'; return false;">brini<span style="display: none;">.nosp@m.</span>matt<span style="display: none;">.nosp@m.</span>eo@gm<span style="display: none;">.nosp@m.</span>ail.<span style="display: none;">.nosp@m.</span>com</a>) </dd></dl>
@@ -105,14 +117,14 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a50080c6fb7f8dc7b0e9eb84c999de0b7" name="a50080c6fb7f8dc7b0e9eb84c999de0b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50080c6fb7f8dc7b0e9eb84c999de0b7">&#9670;&nbsp;</a></span>init()</h2>
+<a id="a6a0039b91cdf0f83a50fbc068faee32f" name="a6a0039b91cdf0f83a50fbc068faee32f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a0039b91cdf0f83a50fbc068faee32f">&#9670;&nbsp;</a></span>InitUI()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">G4UImanager * init </td>
+          <td class="memname">G4UImanager * InitUI </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>argc</em>, </td>
@@ -120,7 +132,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char **&#160;</td>
+          <td class="paramtype">const char **&#160;</td>
           <td class="paramname"><em>argv</em>&#160;</td>
         </tr>
         <tr>
@@ -131,36 +143,36 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00043">43</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00071">71</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00062">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00090">main()</a>.</p>
 
 </div>
 </div>
-<a id="a5000f3af8769505c1ff33bd175fa2765" name="a5000f3af8769505c1ff33bd175fa2765"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5000f3af8769505c1ff33bd175fa2765">&#9670;&nbsp;</a></span>isPositiveNumber()</h2>
+<a id="a8e806d6fe067fcfda90a867e1136b418" name="a8e806d6fe067fcfda90a867e1136b418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e806d6fe067fcfda90a867e1136b418">&#9670;&nbsp;</a></span>IsPositiveNumber()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool isPositiveNumber </td>
+          <td class="memname">bool IsPositiveNumber </td>
           <td>(</td>
-          <td class="paramtype">char&#160;</td>
+          <td class="paramtype">const char&#160;</td>
           <td class="paramname"><em>number</em>[]</td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00030">30</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00058">58</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00062">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00090">main()</a>.</p>
 
 </div>
 </div>
-<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+<a id="a217dbf8b442f20279ea00b898af96f52" name="a217dbf8b442f20279ea00b898af96f52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a217dbf8b442f20279ea00b898af96f52">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,7 +186,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char **&#160;</td>
+          <td class="paramtype">const char **&#160;</td>
           <td class="paramname"><em>argv</em>&#160;</td>
         </tr>
         <tr>
@@ -185,9 +197,49 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00062">62</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00090">90</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="sim_8cc_source.html#l00043">init()</a>, and <a class="el" href="sim_8cc_source.html#l00030">isPositiveNumber()</a>.</p>
+<p class="reference">References <a class="el" href="sim_8cc_source.html#l00032">Configuration::beamOn</a>, <a class="el" href="sim_8cc_source.html#l00043">gConfig</a>, <a class="el" href="sim_8cc_source.html#l00071">InitUI()</a>, <a class="el" href="sim_8cc_source.html#l00058">IsPositiveNumber()</a>, <a class="el" href="sim_8cc_source.html#l00033">Configuration::nEvents</a>, <a class="el" href="sim_8cc_source.html#l00045">PrintHelp()</a>, and <a class="el" href="sim_8cc_source.html#l00031">Configuration::vis</a>.</p>
+
+</div>
+</div>
+<a id="ae964ff8411b4fdcaf65cb5529aea4bef" name="ae964ff8411b4fdcaf65cb5529aea4bef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae964ff8411b4fdcaf65cb5529aea4bef">&#9670;&nbsp;</a></span>PrintHelp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrintHelp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00045">45</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00090">main()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a93bd1107b21227843b0188d647961929" name="a93bd1107b21227843b0188d647961929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93bd1107b21227843b0188d647961929">&#9670;&nbsp;</a></span>gConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_configuration.html">Configuration</a> gConfig</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00043">43</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00090">main()</a>.</p>
 
 </div>
 </div>

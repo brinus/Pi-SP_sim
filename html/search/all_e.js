@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vacuum_0',['vacuum',['../class_my_detector_construction.html#a127aa5fac3ade15213e1f43d1877928b',1,'MyDetectorConstruction']]]
+  ['thick_0',['thick',['../class_my_detector_construction.html#a40d58b3850cdaae755b8196c9288371a',1,'MyDetectorConstruction']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['edgecolors_0',['edgecolors',['../namespaceplot__3d.html#a803263f9087919419781e73c6fc6aa57',1,'plot_3d']]]
+  ['data_0',['data',['../namespaceplot__3d.html#a736746b49c19e320e4ceae186d2e24ab',1,'plot_3d']]]
 ];

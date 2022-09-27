@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cmap_0',['cmap',['../namespaceplot__3d.html#a4bca9dacff4d1b8b5a99d25accf8321b',1,'plot_3d']]]
+  ['beamon_0',['beamOn',['../struct_configuration.html#a6f85d7b3bbbc3ed484f3f128dc555e43',1,'Configuration']]]
 ];

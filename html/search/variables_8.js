@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['solidcyl_5fi_0',['solidCyl_i',['../class_my_detector_construction.html#a6ee0a67cd9d67c319af3b3d6a92b697a',1,'MyDetectorConstruction']]],
-  ['solidcyl_5fo_1',['solidCyl_o',['../class_my_detector_construction.html#a274d37b93ddc59c25219f4f1c3bfaa78',1,'MyDetectorConstruction']]],
-  ['solidcyl_5fv_2',['solidCyl_v',['../class_my_detector_construction.html#a8225483fd7b2103431f5ced5609c4f5a',1,'MyDetectorConstruction']]],
-  ['solidfdet_3',['solidFDet',['../class_my_detector_construction.html#a7c1a551e426ef2b4f9031bdd5ee76e81',1,'MyDetectorConstruction']]],
-  ['solidlh2_4',['solidLH2',['../class_my_detector_construction.html#a389089493644e6f3cf3cbf3257e71bf0',1,'MyDetectorConstruction']]],
-  ['solidthick_5',['solidThick',['../class_my_detector_construction.html#a0bc8af24c5d2199fa2ba88ebb800c5fd',1,'MyDetectorConstruction']]],
-  ['solidworld_6',['solidWorld',['../class_my_detector_construction.html#a565510f886b4721162630c2baa1d8756',1,'MyDetectorConstruction']]]
+  ['layers_0',['layers',['../class_my_detector_construction.html#ade05267607cef7918cf7486e6357dcfa',1,'MyDetectorConstruction']]],
+  ['lh2_1',['lH2',['../class_my_detector_construction.html#abaf6c34455f2928648145969f45ecb6a',1,'MyDetectorConstruction']]],
+  ['linewidths_2',['linewidths',['../namespaceplot__3d.html#a1cd648f988aba224439e999b640ecc49',1,'plot_3d']]],
+  ['logiccyl_5fi_3',['logicCyl_i',['../class_my_detector_construction.html#a05c500103ace15f7c86d4511c707a1f3',1,'MyDetectorConstruction']]],
+  ['logiccyl_5fo_4',['logicCyl_o',['../class_my_detector_construction.html#a6cbcfc43de1922409e3e2eee168d579b',1,'MyDetectorConstruction']]],
+  ['logiccyl_5fv_5',['logicCyl_v',['../class_my_detector_construction.html#a1b67f6452bc7b4d2cca1b16bdb465348',1,'MyDetectorConstruction']]],
+  ['logicfdet_6',['logicFDet',['../class_my_detector_construction.html#a1596a2e24246437b279e777d7f6b94ab',1,'MyDetectorConstruction']]],
+  ['logiclh2_7',['logicLH2',['../class_my_detector_construction.html#a661cc69d8ed87513c8c8bc531bd07739',1,'MyDetectorConstruction']]],
+  ['logicthick_8',['logicThick',['../class_my_detector_construction.html#a4079527797540f1d3ceabcaf4c2d8578',1,'MyDetectorConstruction']]],
+  ['logicworld_9',['logicWorld',['../class_my_detector_construction.html#a43fc867cbed18c61d944b4df334d6004',1,'MyDetectorConstruction']]]
 ];
