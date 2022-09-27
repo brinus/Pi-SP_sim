@@ -1,5 +1,5 @@
 /**
- * @file mScan_layers.cpp
+ * @file mScan.cpp
  * @author Matteo Brini (brinimatteo@gmail.com)
  * @brief 
  * @version 0.1
@@ -21,7 +21,7 @@
 #include "TStyle.h"
 #include "TLine.h"
 
-void mScan_layers(){
+void mScan(){
     /**
      * @brief The macro opens a list of files named with fName, numbered with vLayers, with extention fType.
      * The files come as output of ./sim, TTree "LH2" is taken for each file, "fZ" branch is saved in a vector
