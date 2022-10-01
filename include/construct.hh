@@ -18,30 +18,29 @@
 
 class MyDetectorConstruction : public G4VUserDetectorConstruction
 {
-    public:
-        MyDetectorConstruction();
-        ~MyDetectorConstruction();
+public:
+    MyDetectorConstruction();
+    ~MyDetectorConstruction();
 
-        virtual G4VPhysicalVolume * Construct();
+    virtual G4VPhysicalVolume *Construct();
 
-    private:
-        G4Box *solidWorld;
-        G4Tubs *solidCyl_o, *solidCyl_v, *solidCyl_i, *solidLH2, *solidFDet, *solidThick;
-        G4LogicalVolume *logicWorld, *logicCyl_o, *logicCyl_v, *logicCyl_i, *logicLH2, *logicFDet, *logicThick;
-        G4VPhysicalVolume *physWorld, *physCyl_o, *physCyl_v, *physCyl_i, *physLH2, *physFDet, *physThick;
+private:
+    G4Box *solidWorld;
+    G4Tubs *solidCyl_o, *solidCyl_v, *solidCyl_i, *solidLH2, *solidFDet, *solidThick;
+    G4LogicalVolume *logicWorld, *logicCyl_o, *logicCyl_v, *logicCyl_i, *logicLH2, *logicFDet, *logicThick;
+    G4VPhysicalVolume *physWorld, *physCyl_o, *physCyl_v, *physCyl_i, *physLH2, *physFDet, *physThick;
 
-        G4double xWorld, yWorld, zWorld;
+    G4double xWorld, yWorld, zWorld;
 
-        G4Material *worldMat, *lH2, *inox, *vacuum;
+    G4Material *worldMat, *lH2, *inox, *vacuum;
 
-        G4GenericMessenger * fMessenger;
+    G4GenericMessenger *fMessenger;
 
-        G4int layers;
-        G4double thick;
+    G4int layers;
+    G4double thick;
 
-        virtual void ConstructSDandField();
-        void DefineMaterial();
-
+    virtual void ConstructSDandField();
+    void DefineMaterial();
 };
 
 #endif

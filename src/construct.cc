@@ -2,12 +2,12 @@
 
 MyDetectorConstruction::MyDetectorConstruction()
 {
+    layers = 1;
+    thick = 0.5;
+
     fMessenger = new G4GenericMessenger(this, "/detector/", "Detector construction");
     fMessenger->DeclareProperty("layers", layers, "Number of layers before entering the cylinder");
     fMessenger->DeclareProperty("thick", thick, "Thickness of a single layer");
-
-    layers = 0;
-    thick = 0.5;
 
     xWorld = 50*km;
     yWorld = 50*km;

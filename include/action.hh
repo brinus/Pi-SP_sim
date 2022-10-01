@@ -8,9 +8,9 @@
 
 class MyActionInitialization : public G4VUserActionInitialization
 {
-    public:
-        MyActionInitialization();
-        ~MyActionInitialization();
+public:
+    MyActionInitialization();
+    ~MyActionInitialization();
 
     virtual void Build() const;
 };
