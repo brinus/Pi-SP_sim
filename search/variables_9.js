@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nevents_0',['nEvents',['../struct_configuration.html#a5766b1673c2d85673a49ce546070bdd0',1,'Configuration']]]
+  ['mom_0',['mom',['../class_my_primary_generator.html#aa36e903c521536721b18652a16c6ce9e',1,'MyPrimaryGenerator']]],
+  ['momentum_1',['momentum',['../class_my_primary_generator.html#a5797e2b69aa7a4635eff66f3e4f4a09c',1,'MyPrimaryGenerator']]]
 ];

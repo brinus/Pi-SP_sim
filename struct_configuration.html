@@ -88,10 +88,16 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:af2947e8217144ee05e91007817814d76"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_configuration.html#af2947e8217144ee05e91007817814d76">vis</a></td></tr>
+<tr class="memdesc:af2947e8217144ee05e91007817814d76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for the visualization option.  <a href="struct_configuration.html#af2947e8217144ee05e91007817814d76">More...</a><br /></td></tr>
 <tr class="separator:af2947e8217144ee05e91007817814d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f85d7b3bbbc3ed484f3f128dc555e43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_configuration.html#a6f85d7b3bbbc3ed484f3f128dc555e43">beamOn</a></td></tr>
+<tr class="memdesc:a6f85d7b3bbbc3ed484f3f128dc555e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for the beamOn option.  <a href="struct_configuration.html#a6f85d7b3bbbc3ed484f3f128dc555e43">More...</a><br /></td></tr>
 <tr class="separator:a6f85d7b3bbbc3ed484f3f128dc555e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a762d6d4639e06e52fe8ad9c1972467ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_configuration.html#a762d6d4639e06e52fe8ad9c1972467ec">gamma</a></td></tr>
+<tr class="memdesc:a762d6d4639e06e52fe8ad9c1972467ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to enable gamma generation instead of pi-.  <a href="struct_configuration.html#a762d6d4639e06e52fe8ad9c1972467ec">More...</a><br /></td></tr>
+<tr class="separator:a762d6d4639e06e52fe8ad9c1972467ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5766b1673c2d85673a49ce546070bdd0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_configuration.html#a5766b1673c2d85673a49ce546070bdd0">nEvents</a></td></tr>
+<tr class="memdesc:a5766b1673c2d85673a49ce546070bdd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number to pass at beamOn macro.  <a href="struct_configuration.html#a5766b1673c2d85673a49ce546070bdd0">More...</a><br /></td></tr>
 <tr class="separator:a5766b1673c2d85673a49ce546070bdd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -114,9 +120,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00040">40</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00041">41</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="sim_8cc_source.html#l00036">beamOn</a>, <a class="el" href="sim_8cc_source.html#l00037">nEvents</a>, and <a class="el" href="sim_8cc_source.html#l00035">vis</a>.</p>
+<p class="reference">References <a class="el" href="sim_8cc_source.html#l00036">beamOn</a>, <a class="el" href="sim_8cc_source.html#l00037">gamma</a>, <a class="el" href="sim_8cc_source.html#l00038">nEvents</a>, and <a class="el" href="sim_8cc_source.html#l00035">vis</a>.</p>
 
 </div>
 </div>
@@ -132,11 +138,32 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Flag for the beamOn option. </p>
+
+<p>Flag for the beamOn option. </p>
 
 <p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00036">36</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00040">Configuration()</a>, and <a class="el" href="sim_8cc_source.html#l00122">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00041">Configuration()</a>, and <a class="el" href="sim_8cc_source.html#l00104">main()</a>.</p>
+
+</div>
+</div>
+<a id="a762d6d4639e06e52fe8ad9c1972467ec" name="a762d6d4639e06e52fe8ad9c1972467ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a762d6d4639e06e52fe8ad9c1972467ec">&#9670;&nbsp;</a></span>gamma</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Configuration::gamma</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to enable gamma generation instead of pi-. </p>
+
+<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00037">37</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00041">Configuration()</a>, and <a class="el" href="sim_8cc_source.html#l00104">main()</a>.</p>
 
 </div>
 </div>
@@ -151,11 +178,12 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Number to pass at beamOn macro. </p>
 
-<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00037">37</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
+<p>Number to pass at beamOn macro. </p>
 
-<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00040">Configuration()</a>, and <a class="el" href="sim_8cc_source.html#l00122">main()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00038">38</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00041">Configuration()</a>, and <a class="el" href="sim_8cc_source.html#l00104">main()</a>.</p>
 
 </div>
 </div>
@@ -170,11 +198,12 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Flag for the visualization option. </p>
+
+<p>Flag for the visualization option. </p>
 
 <p class="definition">Definition at line <a class="el" href="sim_8cc_source.html#l00035">35</a> of file <a class="el" href="sim_8cc_source.html">sim.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00040">Configuration()</a>, and <a class="el" href="sim_8cc_source.html#l00122">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sim_8cc_source.html#l00041">Configuration()</a>, and <a class="el" href="sim_8cc_source.html#l00104">main()</a>.</p>
 
 </div>
 </div>
