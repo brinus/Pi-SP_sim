@@ -90,13 +90,6 @@ G4VPhysicalVolume * MyDetectorConstruction::Construct()
 
     logicLH2->SetVisAttributes(cCyan_l);
 
-    // First detector (FDet)
-    // solidFDet = new G4Tubs("solidFDet", 0.*mm, 49.9*mm, 0.5*mm, 0, twopi);
-    // logicFDet = new G4LogicalVolume(solidFDet, vacuum, "logicFDet");
-    // physFDet = new G4PVPlacement(0, G4ThreeVector(0, 0, -54*mm), logicFDet, "physFDet", logicCyl_v, false, 0, true);  
-
-    // logicFDet->SetVisAttributes(cYellow);
-
     // Modulable thickness layer
     solidThick = new G4Tubs("solidThick", 0.*mm, 53.*mm, (thick/2)*mm, 0, twopi);
     logicThick = new G4LogicalVolume(solidThick, inox, "logicThick");
@@ -118,11 +111,6 @@ void MyDetectorConstruction::ConstructSDandField()
     MySDParticleFilter * piFilter = new MySDParticleFilter("piFilter", "pi-");
 
     // ----------- ACTIVE DETECTORS -----------------------
-
-    // First detector (FDet): study pi- momentum after entering the vacuum volume
-    // MySensitiveDetector * sensFDet = new MySensitiveDetector("sensFDet");
-    // sensFDet->SetFilter(piFilter);               // added filter
-    // logicFDet->SetSensitiveDetector(sensFDet);   // setted
 
     // LH2 detector (LH2Det): study of pi- CEX in LH2 target
     MySensitiveDetector * sensLH2 = new MySensitiveDetector("sensLH2");

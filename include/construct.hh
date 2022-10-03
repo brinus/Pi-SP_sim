@@ -26,9 +26,9 @@ public:
 
 private:
     G4Box *solidWorld;
-    G4Tubs *solidCyl_o, *solidCyl_v, *solidCyl_i, *solidLH2, *solidFDet, *solidThick;
-    G4LogicalVolume *logicWorld, *logicCyl_o, *logicCyl_v, *logicCyl_i, *logicLH2, *logicFDet, *logicThick;
-    G4VPhysicalVolume *physWorld, *physCyl_o, *physCyl_v, *physCyl_i, *physLH2, *physFDet, *physThick;
+    G4Tubs *solidCyl_o, *solidCyl_v, *solidCyl_i, *solidLH2, *solidThick;
+    G4LogicalVolume *logicWorld, *logicCyl_o, *logicCyl_v, *logicCyl_i, *logicLH2, *logicThick;
+    G4VPhysicalVolume *physWorld, *physCyl_o, *physCyl_v, *physCyl_i, *physLH2, *physThick;
 
     G4double xWorld, yWorld, zWorld;
 
