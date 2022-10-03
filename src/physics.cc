@@ -15,10 +15,8 @@ MyPhysicsList::~MyPhysicsList()
 
 MyUserPhysicsList::MyUserPhysicsList()
 {
-    //ConstructParticle();
-    //ConstructProcess();
-
-    // RegisterPhysics(new G4EmStandardPhysics());
+    ConstructParticle();
+    ConstructProcess();
 }
 
 MyUserPhysicsList::~MyUserPhysicsList()
@@ -27,9 +25,10 @@ MyUserPhysicsList::~MyUserPhysicsList()
 
 void MyUserPhysicsList::ConstructParticle()
 {
-    mConstructor.ConstructParticle();
-    boConstructor.ConstructParticle();
-    baConstructor.ConstructParticle();
+    G4PionMinus::Definition();
+    G4PionZero::Definition();
+    G4Proton::Definition();
+    G4Neutron::Definition();
     G4Gamma::Definition();
 }
 
@@ -80,9 +79,5 @@ void MyUserPhysicsList::ContructGeneral()
         {
             ph->RegisterProcess(new G4ChargeExchangeProcess(), particleDefinition);
         }
-        // else if (particleDefinition == G4Gamma::Definition())
-        // {
-        //     ph->RegisterProcess(new G4Decay(), particleDefinition);
-        // }
     }
 }

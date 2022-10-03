@@ -19,6 +19,7 @@
 #include "G4BosonConstructor.hh"
 #include "G4BaryonConstructor.hh"
 
+#include "G4Transportation.hh"
 #include "G4ChargeExchangeProcess.hh"
 #include "G4Decay.hh"
 
@@ -40,11 +41,6 @@ public:
     virtual void ConstructProcess();
 
     void ContructGeneral();
-
-private:
-    G4MesonConstructor mConstructor;
-    G4BosonConstructor boConstructor;
-    G4BaryonConstructor baConstructor;
 };
 
 #endif
