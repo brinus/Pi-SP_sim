@@ -6,5 +6,6 @@ var searchData=
   ['_7emyprimarygenerator_3',['~MyPrimaryGenerator',['../class_my_primary_generator.html#a2d8e84de7be72677f984fb317977d732',1,'MyPrimaryGenerator']]],
   ['_7emyrunaction_4',['~MyRunAction',['../class_my_run_action.html#a82c981e9ea84bee9578cb7cafae7fbff',1,'MyRunAction']]],
   ['_7emysdparticlefilter_5',['~MySDParticleFilter',['../class_my_s_d_particle_filter.html#a21cc36145e446105e92efbceedc7770b',1,'MySDParticleFilter']]],
-  ['_7emysensitivedetector_6',['~MySensitiveDetector',['../class_my_sensitive_detector.html#a144f30235a096f92552720481135468c',1,'MySensitiveDetector']]]
+  ['_7emysensitivedetector_6',['~MySensitiveDetector',['../class_my_sensitive_detector.html#a144f30235a096f92552720481135468c',1,'MySensitiveDetector']]],
+  ['_7emyuserphysicslist_7',['~MyUserPhysicsList',['../class_my_user_physics_list.html#ac059d3b0f101f213b079d80894a84d8c',1,'MyUserPhysicsList']]]
 ];

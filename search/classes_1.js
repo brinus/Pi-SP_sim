@@ -6,5 +6,6 @@ var searchData=
   ['myprimarygenerator_3',['MyPrimaryGenerator',['../class_my_primary_generator.html',1,'']]],
   ['myrunaction_4',['MyRunAction',['../class_my_run_action.html',1,'']]],
   ['mysdparticlefilter_5',['MySDParticleFilter',['../class_my_s_d_particle_filter.html',1,'']]],
-  ['mysensitivedetector_6',['MySensitiveDetector',['../class_my_sensitive_detector.html',1,'']]]
+  ['mysensitivedetector_6',['MySensitiveDetector',['../class_my_sensitive_detector.html',1,'']]],
+  ['myuserphysicslist_7',['MyUserPhysicsList',['../class_my_user_physics_list.html',1,'']]]
 ];
