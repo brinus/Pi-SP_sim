@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['layers_0',['layers',['../class_my_detector_construction.html#ade05267607cef7918cf7486e6357dcfa',1,'MyDetectorConstruction']]],
+  ['layers_0',['layers',['../class_my_detector_construction.html#ade05267607cef7918cf7486e6357dcfa',1,'MyDetectorConstruction::layers()'],['../struct_configuration.html#a83224a464987c172b6acef60b6e6838f',1,'Configuration::layers()']]],
   ['lh2_1',['lH2',['../class_my_detector_construction.html#abaf6c34455f2928648145969f45ecb6a',1,'MyDetectorConstruction']]],
   ['linewidths_2',['linewidths',['../namespaceplot__3d.html#a1cd648f988aba224439e999b640ecc49',1,'plot_3d']]],
   ['logiccyl_5fi_3',['logicCyl_i',['../class_my_detector_construction.html#a05c500103ace15f7c86d4511c707a1f3',1,'MyDetectorConstruction']]],
