@@ -34,16 +34,20 @@ struct Configuration
    Configuration();
    bool vis;      ///< Flag for the visualization option.
    bool beamOn;   ///< Flag for the beamOn option.
+   bool layers;   ///< Flag for layers.
    bool gamma;    ///< Flag to enable gamma generation instead of pi-.
    char *nEvents; ///< Number to pass at beamOn macro.
+   char *nLayers; ///< Number of layers.
 };
 
 Configuration::Configuration()
 {
    vis = false;
    beamOn = false;
+   layers = false;
    gamma = false;
    nEvents = "100";
+   nLayers = "1";
 }
 
 Configuration gConfig;
@@ -61,13 +65,14 @@ void PrintHelp()
              << std::endl;
    std::cout << "Pi-SP_sim/build $ ./sim [command] [option]\n"
              << std::endl;
-   std::cout << "                        : Simulation starts in GUI mode" << std::endl;
    std::cout << "   -v, --vis            : Simulation starts in GUI mode" << std::endl;
    std::cout << "   -b [n], --beamOn [n] : Simulation starts in batch mode, if --vis is passed then GUI is launched." << std::endl;
-   std::cout << "                          Executing macro /run/beamOn [n]," << std::endl;
+   std::cout << "                          Executing macro /run/beamOn [n], where [n] is an integer passed as input." << std::endl;
+   std::cout << "                          Defalut is [n] = 100." << std::endl;
+   std::cout << "   -l [n], --layers [n] : Setting the number [n] of layers in the current simulation. Requires to" << std::endl;
+   std::cout << "                          specify --vis or --beamOn." << std::endl;
    std::cout << "   -g, --gamma          : Two gammas are generated in the LH2 instead of the single pi- coming from" << std::endl;
-   std::cout << "                          outside of the cylinder." << std::endl;
-   std::cout << "                          where [n] is an integer passed as input (defalut is [n] = 100)\n"
+   std::cout << "                          outside of the cylinder.\n"
              << std::endl;
 }
 
@@ -124,7 +129,7 @@ int main(int argc, const char **argv)
       {
          gConfig.beamOn = true;
          gConfig.nEvents = "100";
-         if (IsPositiveNumber(argv[i + 1]))
+         if (i + 1 < argc && IsPositiveNumber(argv[i + 1]))
          {
             gConfig.nEvents = (char *)argv[i + 1];
             i++;
@@ -133,6 +138,21 @@ int main(int argc, const char **argv)
       else if (strcmp(argv[i], "-g") == 0 || strcmp(argv[i], "--gamma") == 0)
       {
          gConfig.gamma = true;
+      }
+      else if (strcmp(argv[i], "-l") == 0 || strcmp(argv[i], "--layers") == 0)
+      {
+         gConfig.layers = true;
+         if (i + 1 < argc && IsPositiveNumber(argv[i + 1]))
+         {
+            gConfig.nLayers = (char *)argv[i + 1];
+            i++;
+         }
+         else
+         {
+            std::cerr << "Option layers requires an integer in input." << std::endl;
+            PrintHelp();
+            return 1;
+         }
       }
       else if (strcmp(argv[i], "-h") == 0 || strcmp(argv[i], "--help") == 0)
       {
@@ -153,6 +173,12 @@ int main(int argc, const char **argv)
       }
    }
 
+   if (argc == 1)
+   {
+      PrintHelp();
+      return 1;
+   }
+
    G4Random::setTheEngine(new CLHEP::RanecuEngine());
    G4long seed = time(NULL);
    G4Random::setTheSeed(seed);
@@ -169,7 +195,7 @@ int main(int argc, const char **argv)
    G4UImanager *UImanager = G4UImanager::GetUIpointer();
    G4UIExecutive *ui = nullptr;
 
-   if (gConfig.vis || argc == 1)
+   if (gConfig.vis)
    {
       ui = new G4UIExecutive(argc, (char **)argv);
       UImanager->ApplyCommand("/control/execute vis.mac");
@@ -179,6 +205,21 @@ int main(int argc, const char **argv)
    {
       // UImanager->ApplyCommand("/generator/gamma true");
       return 0;
+   }
+
+   if (gConfig.layers)
+   {
+      if (gConfig.vis == false && gConfig.beamOn == false)
+      {
+         std::cout << "Run mode not specified: use --vis or --beamOn" << std::endl;
+         PrintHelp();
+         delete visManager;
+         delete runManager;
+         delete ui;
+         return 0;
+      }
+      UImanager->ApplyCommand("/detector/layers " + (std::string)gConfig.nLayers);
+      UImanager->ApplyCommand("/run/reinitializeGeometry");
    }
 
    if (gConfig.beamOn)
