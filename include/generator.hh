@@ -22,8 +22,7 @@ private:
     G4GenericMessenger *fMessenger;
 
     G4ParticleGun *fParticleGun;
-    
-    G4bool gamma;
+
     G4ThreeVector pos, mom;
     G4double momentum, x_0, y_0, z_0, theta, phi;
 
