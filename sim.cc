@@ -35,7 +35,8 @@ struct Configuration
    bool vis;      ///< Flag for the visualization option.
    bool beamOn;   ///< Flag for the beamOn option.
    bool layers;   ///< Flag for layers.
-   bool gamma;    ///< Flag to enable gamma generation instead of pi-.
+   bool thick;    ///< Flag for thickness of degradators.
+   char *zThick;  ///< Thickness of degradators in mm.
    char *nEvents; ///< Number to pass at beamOn macro.
    char *nLayers; ///< Number of layers.
 };
@@ -45,7 +46,8 @@ Configuration::Configuration()
    vis = false;
    beamOn = false;
    layers = false;
-   gamma = false;
+   thick = false;
+   zThick = "0.5";
    nEvents = "100";
    nLayers = "1";
 }
@@ -71,8 +73,8 @@ void PrintHelp()
    std::cout << "                          Defalut is [n] = 100." << std::endl;
    std::cout << "   -l [n], --layers [n] : Setting the number [n] of layers in the current simulation. Requires to" << std::endl;
    std::cout << "                          specify --vis or --beamOn." << std::endl;
-   std::cout << "   -g, --gamma          : Two gammas are generated in the LH2 instead of the single pi- coming from" << std::endl;
-   std::cout << "                          outside of the cylinder.\n"
+   std::cout << "   -t [n], --thick [z]  : Setting the thickness [z] of layers in the current simulation. Requires" << std::endl;
+   std::cout << "                          to specify --vis or --beamOn.\n"
              << std::endl;
 }
 
@@ -135,9 +137,11 @@ int main(int argc, const char **argv)
             i++;
          }
       }
-      else if (strcmp(argv[i], "-g") == 0 || strcmp(argv[i], "--gamma") == 0)
+      else if (strcmp(argv[i], "-t") == 0 || strcmp(argv[i], "--thick") == 0)
       {
-         gConfig.gamma = true;
+         gConfig.thick = true;
+         gConfig.zThick = (char *)argv[i + 1];
+         i++;
       }
       else if (strcmp(argv[i], "-l") == 0 || strcmp(argv[i], "--layers") == 0)
       {
@@ -201,10 +205,19 @@ int main(int argc, const char **argv)
       UImanager->ApplyCommand("/control/execute vis.mac");
    }
 
-   if (gConfig.gamma)
+   if (gConfig.thick)
    {
-      // UImanager->ApplyCommand("/generator/gamma true");
-      return 0;
+      if (gConfig.vis == false && gConfig.beamOn == false)
+      {
+         std::cout << "Run mode not specified: use --vis or --beamOn" << std::endl;
+         PrintHelp();
+         delete visManager;
+         delete runManager;
+         delete ui;
+         return 0;
+      }
+      UImanager->ApplyCommand("/detector/thick " + (std::string)gConfig.zThick);
+      UImanager->ApplyCommand("/run/reinitializeGeometry");
    }
 
    if (gConfig.layers)
