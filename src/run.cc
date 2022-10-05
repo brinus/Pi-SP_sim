@@ -4,15 +4,6 @@ MyRunAction::MyRunAction()
 {
     G4AnalysisManager * man = G4AnalysisManager::Instance();
 
-    // Ntuple for FDet data
-    // man->CreateNtuple("FDet", "FDet");
-    // man->CreateNtupleIColumn("fEvent");
-    // man->CreateNtupleDColumn("fX");
-    // man->CreateNtupleDColumn("fY");
-    // man->CreateNtupleDColumn("fZ");
-    // man->CreateNtupleDColumn("fE");
-    // man->FinishNtuple(0);
-
     // Ntuple for process-name and endpoint coordinates in LH2 target
     man->CreateNtuple("LH2", "LH2");
     man->CreateNtupleIColumn("fEvent");
